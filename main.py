@@ -3,13 +3,14 @@ import random
 import game_data
 import art
 src = game_data.data
-length = len(src)
 end_game = False
-a_dic = src[random.randint(0,50)]
+a_dic = random.choice(src)
 score = 0
 print(art.logo)
 while not end_game:
-  b_dic = src[random.randint(0,50)]
+  b_dic = random.choice(src)
+  while a_dic == b_dic:
+    b_dic = random.choice(src)
   print(f"Compare A: {a_dic['name']}, a {a_dic['description']}, from {a_dic['country']} ")
   print(art.vs)
   print(f"Against B:{b_dic['name']}, a {b_dic['description']}, from {b_dic['country']}")
