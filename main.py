@@ -9,6 +9,7 @@ score = 0
 print(art.logo)
 while not end_game:
   b_dic = random.choice(src)
+  # make sure the 2 choices are different
   while a_dic == b_dic:
     b_dic = random.choice(src)
   print(f"Compare A: {a_dic['name']}, a {a_dic['description']}, from {a_dic['country']} ")
